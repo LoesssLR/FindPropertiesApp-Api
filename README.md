@@ -20,11 +20,11 @@ A simple REST API for a properties listing app. Provides user management, authen
 
 ## 🔗 URL API - AZURE.
 
--   Base URL: `-`
+-   Base URL: `test-findpropertiesapp-api-hhezgmdadnfrg6fz.eastus2-01.azurewebsites.net`
 
 Example:
 
-    https://
+    https://test-findpropertiesapp-api-hhezgmdadnfrg6fz.eastus2-01.azurewebsites.net/
 
 ------------------------------------------------------------------------
 
@@ -51,6 +51,10 @@ All responses follow this structure:
   "message": "Descriptive message"
 }
 ```
+
+## 📝 Note before starting.
+
+Since I am using a student Azure account and a free plan to deploy the API, the container where it is hosted may be restarted from time to time. Therefore, calling /users/getAllUsers at the beginning might return an empty list. It is recommended to follow the flow starting from /auth/signup. Everything is working correctly and has been fully tested.
 
 ------------------------------------------------------------------------
 
@@ -264,7 +268,7 @@ Using the user token provided by the login.
 Auth Type: Bearer Token.
 And paste the user token.
 
-**Body (partial):**
+**Body**
 
 ``` json
 {
@@ -304,7 +308,7 @@ And paste the user token.
 
 ------------------------------------------------------------------------
 
-### ▶ GET `http://localhost:3000/:queryparams`.
+### ▶ GET `/properties/:queryparams`.
 
 Filters and lists properties.
 
@@ -342,6 +346,11 @@ Empty
     "message": "Property removed properly."
 }
 ```
+------------------------------------------------------------------------
+
+## You can also view the same documentation here:
+
+https://documenter.getpostman.com/view/34251653/2sB3dPTAeV
 
 ------------------------------------------------------------------------
 
