@@ -202,51 +202,69 @@ Using the user token provided by the login.
 Auth Type: Bearer Token.
 And paste the user token.
 
-**Body:**
+**Body (FOR_SALE):**
 
 ``` json
 {
-  "Title": "Casa en Heredia",
-  "Description": "Casa amplia de 3 cuartos",
+  "Title": "Casa en Heredia con hermosa vista",
+  "Description": "Casa amplia de 3 cuartos, 2 baños, cochera para 2 vehículos y una excelente vista a las montañas.",
   "Type": "HOUSE",
-  "Action": "SALE",
+  "Action": "FOR_SALE",
   "Price": 95000000,
+  "Currency": "CRC",
+  "Period": "ONCE",
   "Location": {
-    "Province": "Heredia",
+    "Province": "HEREDIA",
     "City": "San Rafael",
-    "Address": "Centro"
+    "Address": "100 m norte del parque central, Centro"
   },
+  "ImageUris": [
+    "https://mis-fotos.com/propiedades/heredia-casa-1.jpg",
+    "https://mis-fotos.com/propiedades/heredia-casa-1-frente.jpg"
+  ],
   "Bedrooms": 3,
   "Bathrooms": 2,
-  "GarageSpots": 2
+  "AreaM2": 180,
+  "GarageSpots": 2,
+  "Amenities": [
+    "Jardin",
+    "Patio amplio",
+    "Cochera techada",
+    "Pet friendly"
+  ],
+  "OwnerId": "usr-1765396076722"
 }
 ```
 
-**Response example:**
+**Body (FOR_RENT):**
 
 ``` json
 {
-    "data": {
-        "Title": "Casa en Heredia",
-        "Description": "Casa amplia de 3 cuartos",
-        "Type": "HOUSE",
-        "Action": "SALE",
-        "Price": 95000000,
-        "Location": {
-            "Province": "Heredia",
-            "City": "San Rafael",
-            "Address": "Centro"
-        },
-        "Bedrooms": 3,
-        "Bathrooms": 2,
-        "GarageSpots": 2,
-        "OwnerId": "usr-1764900624017",
-        "Id": "prop-1764902310072",
-        "CreatedAt": 1764902310072,
-        "UpdatedAt": 1764902310072
-    },
-    "responseCode": 200,
-    "message": "Property inserted successfully."
+  "Title": "Edificio comercial en San José centro",
+  "Description": "Edificio de 3 pisos para uso comercial, excelente ubicación en el centro de San José.",
+  "Type": "BUILDING",
+  "Action": "FOR_RENT",
+  "Price": 2500000,
+  "Currency": "CRC",
+  "Period": "PER_MONTH",
+  "Location": {
+    "Province": "SAN_JOSE",
+    "City": "San José",
+    "Address": "Avenida Central, frente al Parque Central"
+  },
+  "ImageUris": [
+    "https://ejemplo.com/edificio1.jpg"
+  ],
+  "Bedrooms": null,
+  "Bathrooms": 4,
+  "AreaM2": 500,
+  "GarageSpots": 5,
+  "Amenities": [
+    "Ascensor",
+    "Seguridad 24/7",
+    "Estacionamiento"
+  ],
+  "OwnerId": "usr-1765396076722"
 }
 ```
 
@@ -272,8 +290,8 @@ And paste the user token.
 
 ``` json
 {
-  "Title": "Remodeled house",
-  "Description": "Completely remodeled house with garden",
+  "Title": "Casa Remodelada en Heredia",
+  "Description": "Casa completamente remodelada con jardín amplio",
   "Price": 99000000
 }
 ```
@@ -283,23 +301,34 @@ And paste the user token.
 ``` json
 {
     "data": {
-        "Title": "Remodeled house",
-        "Description": "Completely remodeled house with garden",
-        "Type": "HOUSE",
-        "Action": "SALE",
+        "Title": "Casa Remodelada en Heredia",
+        "Description": "Casa completamente remodelada con jardín amplio",
+        "Type": "BUILDING",
+        "Action": "FOR_RENT",
         "Price": 99000000,
+        "Currency": "CRC",
+        "Period": "PER_MONTH",
         "Location": {
-            "Province": "Heredia",
-            "City": "San Rafael",
-            "Address": "Centro"
+            "Province": "SAN_JOSE",
+            "City": "San José",
+            "Address": "Avenida Central, frente al Parque Central"
         },
-        "Bedrooms": 3,
-        "Bathrooms": 2,
-        "GarageSpots": 2,
-        "OwnerId": "usr-1764900624017",
-        "Id": "prop-1764903159681",
-        "CreatedAt": 1764903159681,
-        "UpdatedAt": 1764903207747
+        "ImageUris": [
+            "https://ejemplo.com/edificio1.jpg"
+        ],
+        "Bedrooms": null,
+        "Bathrooms": 4,
+        "AreaM2": 500,
+        "GarageSpots": 5,
+        "Amenities": [
+            "Ascensor",
+            "Seguridad 24/7",
+            "Estacionamiento"
+        ],
+        "OwnerId": "usr-1765397476813",
+        "Id": "prop-1765397777037",
+        "CreatedAt": 1765397777037,
+        "UpdatedAt": 1765400068875
     },
     "responseCode": 200,
     "message": "Property updated successfully."
