@@ -231,8 +231,7 @@ And paste the user token.
     "Patio amplio",
     "Cochera techada",
     "Pet friendly"
-  ],
-  "OwnerId": "usr-1765396076722"
+  ]
 }
 ```
 
@@ -263,8 +262,7 @@ And paste the user token.
     "Ascensor",
     "Seguridad 24/7",
     "Estacionamiento"
-  ],
-  "OwnerId": "usr-1765396076722"
+  ]
 }
 ```
 
@@ -346,7 +344,7 @@ Filters and lists properties.
 
 **Example:**
 
-    /properties/getAllProperties?action=SALE&type=HOUSE
+    /properties/getAllProperties?action=FOR_SALE
 
 ------------------------------------------------------------------------
 
